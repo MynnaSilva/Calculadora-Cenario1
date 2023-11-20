@@ -14,8 +14,13 @@ function back(){
 }
 function calcular(){
     var resultado = document.getElementById('resultado').innerHTML; 
-    document.getElementById('resultado').innerHTML = eval(resultado);
-    
+    if(resultado){
+        document.getElementById('resultado').innerHTML = eval(resultado);
+    }
+    else{
+        document.getElementById('resultado').innerHTML = 'Nada para calcular'
+
+    }
 }
 
 module.exports = {insert, clean, back, calcular}
